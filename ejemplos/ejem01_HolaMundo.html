@@ -27,6 +27,39 @@
         document.write("<br><br>"+variable+variable2+variable3)
 
 
+        //alert("Hola Mundo")
+        if (confirm("Estas seguro?")){
+            alert("Si")
+        }else{
+            alert("No")
+        }
+        //Guardas el valor en una variable que pides al usuario en "pestaña emergente"
+        //var nombre = prompt("Cual es tu nombre?","Victor")
+        nombre = prompt("Cual es tu nombre?")
+
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("Hola "+nombre)
+
+        document.write("<br>")
+        document.write("<br>")
+
+        numero=prompt("Dame un numero y te lo multiplico por 5")
+        // Aqui lo que pasa es que puede que el valor que se obtenga sea una cadena, por lo que se debe convertir a entero
+        document.write("El resultado es: "+numero*5)
+
+        // Esto se puede hacrer de la siguiente manera
+
+        //numero=prompt("Dame un numero y te lo multiplico por 5")
+        numero=parseInt(prompt("Dame un numero y te lo multiplico por 5"))
+        //Opcion 1
+        // document.write("El resultado es: "+(numero+5))
+        numero2=numero+5
+        //Opcion 2
+        document.write("El resultado es: "+numero2)
+
+
     </script>
 
 
