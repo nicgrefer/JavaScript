@@ -1,14 +1,6 @@
 # JavaScript
 Se ejecuta en el navegador del usuario, no en el servidor web
 
-He encontrado los siguientes archivos en las carpetas proporcionadas:
-
-- **ejemplos**: [ejem01_HolaMundo.html](https://github.com/nicgrefer/JavaScript/blob/main/ejemplos/ejem01_HolaMundo.html)
-- **ejercicios**: [ejer01.html](https://github.com/nicgrefer/JavaScript/blob/main/ejercicios/ejer01.html)
-
-Voy a extraer y resumir los conceptos teóricos de estos archivos.
-Aquí tienes los apuntes teóricos basados en los archivos proporcionados:
-
 # Conceptos Teóricos y Ejemplos
 
 ## Variables y Tipos de Datos
