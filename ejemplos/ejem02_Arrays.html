@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //El problema es que acepta todo tipos de datos y no es recomendable
+        //porque se puede confundir con los datos que se quieren almacenar
+        nombres = [33,true,3.3,"Pedro","Maria","Ana","Luis","Carlos","Rosa","Laura"]
+        document.write("<table border='1'>")
+        for(i=0;i<nombres.length;i++){
+            document.write("<tr><td>"+nombres[i]+"</td></tr>")
+        }
+        document.write("</table>")
+
+
+        document.write("<br>")
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
