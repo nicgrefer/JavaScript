@@ -123,6 +123,91 @@ let cantidadPuntos = parseInt(prompt("Dame la cantidad de puntos a procesar"));
         document.write("Cantidad de puntos en el tercer cuadrante: " + tercerCuadrante + "<br>");
         document.write("Cantidad de puntos en el cuarto cuadrante: " + cuartoCuadrante + "<br>");
 
+// ejercicio 7
+
+        let numPositivo = 0;
+        let numNegativo = 0;
+        let bunMultipo15 = 0;
+        let valorNumPares= 0;
+
+        for (let i = 1; i <= 10; i++) {
+            let numero = parseInt(prompt("Dame un número"));
+            if (numero > 0) {
+                numPositivo++;
+            } else if (numero < 0) {
+                numNegativo++;
+            }
+            if(numero % 15 === 0){
+                bunMultipo15++;
+            }
+            if (numero % 2 === 0){
+                valorNumPares= valorNumPares + numero;
+            }
+        }
+
+// ejercicio 8
+
+        let [] edadesTurnoMañana = [];
+        let [] edadesTurnoTarde = [];
+        let [] edadesTurnoNoche = [];
+
+    // completo mañana
+        for (int i=0;i<50;i++){
+            let edad = parseInt(prompt("Dame la edad del alumno " + (i + 1) + " del turno de la mañana"));
+            edadesTurnoMañana.push(edad);
+        }
+
+    // completo tarde
+        for (int i=0;i<60;i++){
+            let edad = parseInt(prompt("Dame la edad del alumno " + (i + 1) + " del turno de la tarde"));
+            edadesTurnoTarde.push(edad);
+        }
+
+    // completo noche
+        for (int i=0;i<110;i++){
+            let edad = parseInt(prompt("Dame la edad del alumno " + (i + 1) + " del turno de la noche"));
+            edadesTurnoNoche.push(edad);
+        }
+
+    // Calculo promedios
+
+        let sumaEdadesTurnoMañana = 0;
+        for (let i = 0; i < edadesTurnoMañana.length; i++) {
+            sumaEdadesTurnoMañana = sumaEdadesTurnoMañana + edadesTurnoMañana[i];
+        }
+        let promedioEdadesTurnoMañana = sumaEdadesTurnoMañana / edadesTurnoMañana.length;
+
+        let sumaEdadesTurnoTarde = 0;
+        for (let i = 0; i < edadesTurnoTarde.length; i++) {
+            sumaEdadesTurnoTarde = sumaEdadesTurnoTarde + edadesTurnoTarde[i];
+        }
+        let promedioEdadesTurnoTarde = sumaEdadesTurnoTarde / edadesTurnoTarde.length;
+
+        let sumaEdadesTurnoNoche = 0;
+        for (let i = 0; i < edadesTurnoNoche.length; i++) {
+            sumaEdadesTurnoNoche = sumaEdadesTurnoNoche + edadesTurnoNoche[i];
+        }
+        let promedioEdadesTurnoNoche = sumaEdadesTurnoNoche / edadesTurnoNoche.length;
+
+        document.write("Promedio de edades del turno de la mañana: " + promedioEdadesTurnoMañana + "<br>");
+        document.write("Promedio de edades del turno de la tarde: " + promedioEdadesTurnoTarde + "<br>");
+        document.write("Promedio de edades del turno de la noche: " + promedioEdadesTurnoNoche + "<br>");
+
+        let promedioMayor=0;
+        tiempo=" ";
+        if (promedioEdadesTurnoMañana > promedioEdadesTurnoTarde && promedioEdadesTurnoMañana > promedioEdadesTurnoNoche) {
+            promedioMayor = promedioEdadesTurnoMañana;
+            tiempo="mañana";
+        } else if (promedioEdadesTurnoTarde > promedioEdadesTurnoMañana && promedioEdadesTurnoTarde > promedioEdadesTurnoNoche) {
+            promedioMayor = promedioEdadesTurnoTarde;
+            tiempo="tarde";
+        } else {
+            promedioMayor = promedioEdadesTurnoNoche;
+            tiempo="noche";
+        }
+
+        document.write("Promedio mayor es por la " + tiempo + " con "+promedioMayor+S"<br>");
+
     </script>
 </head>
 <body>
