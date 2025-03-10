@@ -95,6 +95,34 @@ let equilateros = 0;
 
         document.write("Tipo de triángulo con menor cantidad: " + tipoMenorCantidad + "<br>");
 
+// ejercicio 6  
+
+let cantidadPuntos = parseInt(prompt("Dame la cantidad de puntos a procesar"));
+        let primerCuadrante = 0;
+        let segundoCuadrante = 0;
+        let tercerCuadrante = 0;
+        let cuartoCuadrante = 0;
+
+        for (let i = 1; i <= cantidadPuntos; i++) {
+            let x = parseInt(prompt("Dame la coordenada x del punto " + i));
+            let y = parseInt(prompt("Dame la coordenada y del punto " + i));
+
+            if (x > 0 && y > 0) {
+                primerCuadrante++;
+            } else if (x < 0 && y > 0) {
+                segundoCuadrante++;
+            } else if (x < 0 && y < 0) {
+                tercerCuadrante++;
+            } else if (x > 0 && y < 0) {
+                cuartoCuadrante++;
+            }
+        }
+
+        document.write("Cantidad de puntos en el primer cuadrante: " + primerCuadrante + "<br>");
+        document.write("Cantidad de puntos en el segundo cuadrante: " + segundoCuadrante + "<br>");
+        document.write("Cantidad de puntos en el tercer cuadrante: " + tercerCuadrante + "<br>");
+        document.write("Cantidad de puntos en el cuarto cuadrante: " + cuartoCuadrante + "<br>");
+
     </script>
 </head>
 <body>
