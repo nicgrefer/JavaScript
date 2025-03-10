@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14. Estructura repetitiva (for) </title>
+    <script type="text/JavaScript">
+        // ejrecicio 1
+
+        let count = 0;
+
+        for (let i = 1; i <= 3; i++) {
+            let base = parseFloat(prompt("Dame la base del triángulo " + i));
+            let altura = parseFloat(prompt("Dame la altura del triángulo " + i));
+            let superficie = (base * altura) / 2;
+
+            document.write("Triángulo " + i + ": Base = " + base + ", Altura = " + altura + ", Superficie = " + superficie + "<br>");
+
+            if (superficie > 12) {
+                count++;
+            }
+        }
+
+        document.write("Cantidad de triángulos con superficie mayor a 12: " + count);
+
+        // ejercicio 2
+
+        let suma = 0;
+        for (let i = 1; i <= 10; i++) {
+            let numero = parseInt(prompt("Dame un número"));
+            if (i > 5) {
+                suma = suma + numero;
+            }
+        }
+        document.write("Suma de los últimos 5 números: " + suma + "<br>");
+
+// ejercicio 3
+
+       for(let i = 5; i <= 50; i++){
+           multiplicación = 5 * i;
+           document.write("Multiplo de 5: " + multiplicación + "<br>");
+       }
+       
+// ejercicio 4
+
+       let num = parseInt(prompt("Dame un número drl 1 al 10"));
+
+       if (num<=10 && num>=1){
+           for (let i = 1; i <= 10; i++) {
+               let calculo = num * i;
+               document.write(num + " x " + i + " = " + calculo + "<br>");
+           }
+       } else {
+           document.write("El número no está en el rango de 1 a 10");
+       }
+
+// ejrcicio 5
+
+
+let equilateros = 0;
+        let isosceles = 0;
+        let escalenos = 0;
+
+        for (let i = 1; i <= 4; i++) {
+            let lado1 = parseFloat(prompt("Dame el lado 1 del triángulo " + i));
+            let lado2 = parseFloat(prompt("Dame el lado 2 del triángulo " + i));
+            let lado3 = parseFloat(prompt("Dame el lado 3 del triángulo " + i));
+
+            if (lado1 === lado2 && lado2 === lado3) {
+                document.write("Triángulo " + i + " es equilátero<br>");
+                equilateros++;
+            } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+                document.write("Triángulo " + i + " es isósceles<br>");
+                isosceles++;
+            } else {
+                document.write("Triángulo " + i + " es escaleno<br>");
+                escalenos++;
+            }
+        }
+
+        document.write("Cantidad de triángulos equiláteros: " + equilateros + "<br>");
+        document.write("Cantidad de triángulos isósceles: " + isosceles + "<br>");
+        document.write("Cantidad de triángulos escalenos: " + escalenos + "<br>");
+
+        let menorCantidad = Math.min(equilateros, isosceles, escalenos);
+        let tipoMenorCantidad = "";
+
+        if (menorCantidad === equilateros) {
+            tipoMenorCantidad = "equilátero";
+        } else if (menorCantidad === isosceles) {
+            tipoMenorCantidad = "isósceles";
+        } else {
+            tipoMenorCantidad = "escaleno";
+        }
+
+        document.write("Tipo de triángulo con menor cantidad: " + tipoMenorCantidad + "<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
