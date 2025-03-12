@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15. Funciones con parámetros</title>
+
+    <script type="text/javascript">
+
+        window.onload = function(){
+            // Solicitar los tres números
+            var a = parseInt(prompt("Ingrese el primer número"));
+            var b = parseInt(prompt("Ingrese el segundo número"));
+            var c = parseInt(prompt("Ingrese el tercer número"));
+            
+            // Llamar a la función para ordenar los números
+            var resultado = ordenar(a, b, c);
+            
+            // Mostrar los números ordenados
+            document.write("Los números ordenados de menor a mayor son: " + resultado.join(", ") + "<br>");
+            
+            // Llamar a la función para encontrar el menor número
+            var menorNumero = menor(a, b, c);
+            
+            // Mostrar el menor número
+            document.write("El menor de los tres números es: " + menorNumero);
+        }
+
+        // Función para ordenar tres números
+        function ordenar(a, b, c) {
+            var numeros = [a, b, c];
+            numeros.sort(function(x, y) {
+                return x - y;
+            });
+            return numeros;
+        }
+
+        // Función para encontrar el menor de tres números
+        function menor(a, b, c) {
+            if (a < b && a < c) {
+                return a;
+            } else if (b < a && b < c) {
+                return b;
+            } else {
+                return c;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

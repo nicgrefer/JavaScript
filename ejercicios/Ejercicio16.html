@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16 - Funciones que devuelven un valor</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            let a = input("Introduce el primer número");
+            let b = input("Introduce el segundo número");
+            let c = input("Introduce el tercer número");
+
+            document.write("El mayor de los tres números es: " + mayor(a, b, c) + "<br>");
+
+            let lado = input("Introduce el lado de un cuadrado");
+            document.write("El área del cuadrado es: " + areaCuadrado(lado) + "<br>");
+
+            let cadenaVariable = prompt("Introduce una cadena de variables");
+            document.write("La cadena ingresada es: " + cadenaVariable + "<br>");
+
+            let parametro1 = input("Introduce el primer parámetro");
+            let parametro2 = input("Introduce el segundo parámetro");
+            let parametro3 = input("Introduce el tercer parámetro");
+            document.write("El promedio de los anteriores números es: " + promedio(parametro1, parametro2, parametro3) + "<br>");
+
+            let n1 = input("Introduce el primer número");
+            let n2 = input("Introduce el segundo número");
+            let n3 = input("Introduce el tercer número");
+            let n4 = input("Introduce el cuarto número");
+            let n5 = input("Introduce el quinto número");
+            document.write("La suma de los parámetros es: " + suma(n1, n2, n3, n4, n5) + "<br>");
+        }
+
+        function mayor(a, b, c) {
+            return Math.max(a, b, c);
+        }
+
+        function areaCuadrado(lado) {
+            return lado * lado;
+        }
+
+        function input(mensaje) {
+            let valor;
+            do {
+                valor = parseFloat(prompt(mensaje));
+            } while (isNaN(valor));  // Repetir hasta que se ingrese un número válido
+            return valor;
+        }
+
+        function promedio(a, b, c) {
+            return (a + b + c) / 3;
+        }
+
+        function suma(a, b, c, d, e) {
+            return a + b + c + d + e;
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
