@@ -1,4 +1,4 @@
-# JavaScript
+# JAVASCRIPT ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 Se ejecuta en el navegador del usuario, no en el servidor web
 Aquí tienes los apuntes teóricos basados en los archivos proporcionados:
 
