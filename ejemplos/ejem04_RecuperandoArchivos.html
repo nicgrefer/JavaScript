@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejem4 Recuperando Archivos</title>
+</head>
+
+    <script type="text/javascript">
+
+        //Recuperando elementos del DOM y asignando eventos a los mismos 
+        window.onload=function(){
+            parrafos=document.getElementsByTagName("p");
+            for(i=0;i<parrafos.length;i++){
+                parrafos[i].onmouseover=cambiarColor;
+            }
+        }
+
+        // Función que cambia el color de fondo de un elemento del DOM 
+        function cambiarColor(){
+           this.style.backgroundColor="blue";
+        }
+        
+ 
+        // Función que carga los párrafos del documento y les asigna un color de fondo amarillo 
+        function cargarParrafos(){
+            parrafos = document.getElementsByTagName("p");
+            for (let i = 0; i < parrafos.length; i++) {
+                parrafos[i].style.backgroundColor = "yellow";
+                parrafos[i].innerHTML=i + " " + parrafos[i].innerHTML;
+            }
+        }
+
+
+        // Función que cambia el color del texto de los párrafos del documento 
+        function cambiarColor(){
+            //this.style.backgroundColor=document.getElementsByName("colores")[0].value;
+            this.style.backgroundColor=document.getElementById("id_color").value;
+        }
+
+
+
+    </script>
+
+<body>
+    
+    <select id="id_color" name="colores">
+        <option value="red">Rojo</option>
+        <option value="green">Verde</option>
+        <option value="blue">Azul</option>
+    </select>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi unde facere officia nemo itaque ea consequuntur qui aperiam iure ratione ullam, fugit pariatur deleniti quaerat veritatis amet molestiae animi?</p>
+    <p>Provident totam eos quas ad praesentium nam itaque? Ab unde qui, corrupti accusamus expedita veritatis numquam tenetur suscipit quasi dolorem, porro error, sit commodi debitis! Delectus ullam suscipit quisquam pariatur.</p>
+    <p>Vitae voluptate, doloremque dicta vel nesciunt quae, suscipit, velit minima explicabo amet dolorem obcaecati aliquam exercitationem similique! Iure assumenda minus repellendus nesciunt repudiandae quis neque, eius architecto minima laboriosam fugiat.</p>
+    <p>Voluptatem ipsam itaque error tenetur sed eum recusandae dicta, excepturi deserunt quae nobis repudiandae amet quas autem nihil labore totam dignissimos? Unde dolores non accusantium alias ducimus tenetur nobis expedita?</p>
+    <p>Asperiores numquam repudiandae odit dolor suscipit facere accusantium reprehenderit cum unde dicta modi delectus iste ab recusandae inventore, distinctio quod corporis atque eaque eligendi velit voluptatem nemo error. Totam, explicabo!</p>
+    <p>Quasi repudiandae nobis cum dolorem placeat ipsum excepturi optio aut debitis eos a accusantium commodi, labore dicta? Consectetur, fuga autem? Nihil, doloremque eligendi? Fugiat reprehenderit iusto aliquid dolor a ipsam.</p>
+    <p>Libero accusamus, aut assumenda, doloremque deserunt perferendis error molestiae consequatur, similique amet nobis voluptatibus ab veritatis? Maxime molestias consequuntur impedit quidem in ratione provident, aut sequi. Nesciunt, nulla dicta! Soluta.</p>
+    <p>Pariatur voluptates voluptatibus, ipsum suscipit inventore, voluptatum fugit autem repellendus necessitatibus animi consectetur tenetur nesciunt laboriosam asperiores officia assumenda dignissimos beatae iste, voluptate deleniti ipsa earum. Officia natus totam fuga.</p>
+    <p>Ab fuga ea, totam laudantium esse nesciunt quis alias, cum labore ex quae reprehenderit. Ad autem dicta temporibus rerum fuga, quis cum vel et! Perferendis expedita debitis modi pariatur inventore.</p>
+    <p>Qui ullam numquam quasi at ipsum quia reiciendis molestiae tempore rerum hic veritatis, ratione sed modi, error autem repudiandae officia! Eius aut modi, nobis dolore pariatur nihil maxime tempore rerum!</p>
+
+    <input type="button" value="Cargar parrafos" onclick="cargarParrafos()">
+
+    
+
+</body>
+</html>

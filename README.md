@@ -147,3 +147,15 @@ Este formulario permite ingresar dos números en los campos de entrada y, al pre
 
 [Los ejemplos de esta teoria estan aquí ](ejemplos/ejem03_funciones.html)
 
+
+# Eventos usuales para mudificar propiedades dentro de JavaScript
+
+- onClick y onDblClick
+- onLoad y onUnLoad
+- onMouseOver y onMouseOut
+- onMouseDown, onMouseMove y onMouseUp
+- onChange
+- onFocus y onBlur
+- onKeyDown, onKeyUp y onKeyPress
+- onSelect
+- onSu
