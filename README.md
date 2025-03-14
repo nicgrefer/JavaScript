@@ -48,6 +48,31 @@ Aquí tienes los apuntes teóricos basados en los archivos proporcionados:
   document.write("Hola <a href='https://gregoriofer.com'> Mundo </a>" + nombre);
   ```
 
+- **Modificación de elementos del DOM**: Uso de `getElementsByTagName`, `getElementById` y `innerHTML` para acceder y modificar elementos del DOM.
+  ```javascript
+  window.onload = function(){
+      let parrafos = document.getElementsByTagName("p");
+      for(let i = 0; i < parrafos.length; i++){
+          parrafos[i].onmouseover = cambiarColor;
+      }
+  }
+
+  function cambiarColor(){
+      this.style.backgroundColor = document.getElementById("id_color").value;
+  }
+  ```
+
+- **Cambio de contenido dinámico**: Uso de `innerHTML` para modificar el contenido de los elementos del DOM.
+  ```javascript
+  function cargarParrafos(){
+      let parrafos = document.getElementsByTagName("p");
+      for (let i = 0; i < parrafos.length; i++) {
+          parrafos[i].style.backgroundColor = "yellow";
+          parrafos[i].innerHTML = i + " " + parrafos[i].innerHTML;
+      }
+  }
+  ```
+
 ## Conversión de Tipos
 - **Conversión de Cadenas a Números**: Uso de `parseInt` y `parseFloat` para convertir cadenas a números.
   ```javascript
@@ -65,14 +90,6 @@ Aquí tienes los apuntes teóricos basados en los archivos proporcionados:
       var calcular = num * i;
       document.write(num + " x " + i + " = " + calcular + "<br>");
   }
-
-  document.write("<br><br>");
-
-  document.write("<table border='1'>");
-  for (var i = 0; i < 10; i++) {
-      document.write("<tr><td>" + i + "</td><td>" + 5 + "</td><td>" + i * 5 + "</td></tr>");
-  }
-  document.write("</table>");
   ```
 
 ## Ejercicio de Encabezados
@@ -93,13 +110,11 @@ Aquí tienes los apuntes teóricos basados en los archivos proporcionados:
   }
   document.write("</table>");
   ```
----
+
 # Funciones
 
 ## Descripción
 También se pueden crear funciones que realicen cualquier tipo de acción y llamarlas dentro del código principal.
-
-
 
 ## Ejemplo
 
@@ -109,15 +124,11 @@ function suma(num1, num2) {
 }
 ```
 
-Definición de la función `suma` que recibe dos parámetros `num1` y `num2` y retorna la suma de los dos números, guardándolo en la variable `sumandoNumeros`.
+Llamado a la función `suma` con los parámetros `3` y `8`, guardando el resultado en la variable `sumandoNumeros`.
 
 ```javascript
 let sumandoNumeros = suma(3, 8);
 ```
-
-Llamado a la función `suma` con los parámetros `3` y `8`, guardando el resultado en la variable `sumandoNumeros`.
-
-
 
 ## Guardar datos de un formulario
 
@@ -128,8 +139,6 @@ function recuperarDatos() {
     alert(suma(n1, n2));
 }
 ```
-
-Con el `.value` obtenemos el valor correspondiente y lo guardamos como entero (`int`).
 
 ### Formulario HTML
 
@@ -143,12 +152,7 @@ Con el `.value` obtenemos el valor correspondiente y lo guardamos como entero (`
 
 Este formulario permite ingresar dos números en los campos de entrada y, al presionar el botón "Sumar", se ejecuta la función `recuperarDatos()`, que obtiene los valores de los campos, los convierte a enteros y muestra la suma en una alerta.
 
-
-
-[Los ejemplos de esta teoria estan aquí ](ejemplos/ejem03_funciones.html)
-
-
-# Eventos usuales para mudificar propiedades dentro de JavaScript
+# Eventos usuales para modificar propiedades dentro de JavaScript
 
 - onClick y onDblClick
 - onLoad y onUnLoad
@@ -158,4 +162,4 @@ Este formulario permite ingresar dos números en los campos de entrada y, al pre
 - onFocus y onBlur
 - onKeyDown, onKeyUp y onKeyPress
 - onSelect
-- onSu
+
