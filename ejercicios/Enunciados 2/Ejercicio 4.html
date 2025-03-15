@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 (ejercicios especificos JavaScrept Actual)</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+        button{
+            background-color: #4caf6d;
+            color: white;
+            border: none;
+        }
+        button:hover {
+        background-color: #62f5b8;
+      }
+        
+    </style>
+
+    <script type="text/javascript">
+
+        function TablaMulti(){
+            let base = parseInt(document.getElementById("numCalculo").value);
+            let resultadoDiv = document.getElementById("resultado");
+            
+            if (isNaN(base)){
+                alert ("No puede ser nulo")
+                return
+            }
+
+             // Crear la tabla
+             let tabla = "<h3>Tabla del " + base + "</h3>";
+            tabla += "<table>";
+      
+
+            for (let i = 1; i <= 10; i++) {
+                let resultado = i * base;
+                tabla += `<tr>
+                            <td>${base} x </td>
+                            <td> ${i}</td>
+                            <td> = ${resultado}</td>
+                        </tr>`;
+            }
+
+            tabla += "</table>";
+
+            // Mostrar la tabla sin sobrescribir la página
+            resultadoDiv.innerHTML = tabla;
+             }
+        
+
+    </script>
+
+</head>
+<body>
+    <h1>    Inserter un numero <input type="text" id="numCalculo">
+        <button onclick="TablaMulti()">Calcular</button> 
+    </h1>
+
+
+  <div id="resultado"></div>
+
+</body>
+</html>

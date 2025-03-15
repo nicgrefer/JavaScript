@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 (ejercicios especificos JavaScrept Actual)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+    </style>
+
+    <script type="text/javascript">
+        
+        window.onload=function(){
+            const radios = document.getElementsByName("aliniacion");
+
+            for (let i = 0; i<radios.length ; i++ ){
+                radios[i].onchange= cambioAliniacion;
+            }
+
+        }
+
+        function cambioAliniacion(){
+            let parrafos = document.getElementsByTagName("p");
+            let radios = document.getElementsByName("aliniacion");
+            let aliniacionSeleccionada = "";
+            
+            // Detectar qué radio está seleccionado
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    aliniacionSeleccionada = radios[i].value;
+                    break;
+                }
+            }
+
+            // Aplicar 
+            for (let i = 0; i < parrafos.length; i++){
+                if (aliniacionSeleccionada == "Izquierda"){
+                    parrafos[i].style.textAlign = "left"
+                }else if (aliniacionSeleccionada == "Derecha"){
+                    parrafos[i].style.textAlign = "right"
+                } else if (aliniacionSeleccionada == "Centrado") {
+                    parrafos[i].style.textAlign = "center";
+                } else if (aliniacionSeleccionada == "Justificado") {
+                    parrafos[i].style.textAlign = "justify";
+                }
+
+            }
+
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium porro officia molestias dolore architecto molestiae unde reprehenderit voluptate, laborum ducimus explicabo illo dolorem omnis vitae ad et, accusantium dicta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eligendi nulla cum corrupti tenetur adipisci praesentium corporis pariatur ad voluptate itaque facere officiis natus, eveniet harum accusantium aliquam ducimus blanditiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, perferendis? Reprehenderit minima incidunt, pariatur ad cupiditate nisi quam illum magni cumque odit minus blanditiis corrupti. Reiciendis laborum et commodi doloremque?</p>
+
+    <table>
+        <tr>
+            <td>Izquierda</td>
+            <td><input type="radio" name="aliniacion" value="Izquierda" ></td>
+        </tr>
+        <tr>
+            <td>Derecha</td>
+            <td><input type="radio" name="aliniacion" value="Derecha" ></td>
+        </tr>
+        <tr>
+            <td>Centrado</td>
+            <td><input type="radio" name="aliniacion" value="Centrado" ></td>
+        </tr>
+        <tr>
+            <td>Justificado</td>
+            <td><input type="radio" name="aliniacion" value="Justificado" ></td>
+        </tr>
+    </table>
+
+ 
+</body>
+</html>
