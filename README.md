@@ -163,3 +163,99 @@ Este formulario permite ingresar dos números en los campos de entrada y, al pre
 - onKeyDown, onKeyUp y onKeyPress
 - onSelect
 
+## 📌 **Eventos de Mouse**
+1. **`onClick`** → Se activa cuando el usuario hace un clic sobre un elemento.  
+   🔹 Ejemplo: Un botón que muestra una alerta al hacer clic.  
+   ```html
+   <button onclick="alert('¡Clic detectado!')">Haz clic</button>
+   ```
+
+2. **`onDblClick`** → Se activa cuando el usuario hace doble clic sobre un elemento.  
+   🔹 Ejemplo: Un párrafo que cambia de color al hacer doble clic.  
+   ```html
+   <p ondblclick="this.style.color = 'red'">Haz doble clic aquí</p>
+   ```
+
+3. **`onMouseOver`** → Se activa cuando el cursor entra en un elemento.  
+   🔹 Ejemplo: Un botón que cambia de color cuando el mouse pasa sobre él.  
+   ```html
+   <button onmouseover="this.style.backgroundColor = 'yellow'">Pasa el mouse aquí</button>
+   ```
+
+4. **`onMouseOut`** → Se activa cuando el cursor sale de un elemento.  
+   🔹 Ejemplo: Restaurar el color del botón cuando el mouse se va.  
+   ```html
+   <button onmouseover="this.style.backgroundColor = 'yellow'"
+           onmouseout="this.style.backgroundColor = ''">Pasa el mouse aquí</button>
+   ```
+
+5. **`onMouseDown`** → Se activa cuando el usuario presiona un botón del mouse sobre un elemento.  
+6. **`onMouseUp`** → Se activa cuando el usuario suelta el botón del mouse sobre un elemento.  
+7. **`onMouseMove`** → Se activa cada vez que el mouse se mueve sobre un elemento.  
+
+   🔹 Ejemplo: Mostrar coordenadas del mouse en tiempo real.  
+   ```html
+   <div onmousemove="showCoords(event)" style="width: 300px; height: 100px; border: 1px solid black;">
+       Mueve el mouse aquí
+   </div>
+   <p id="coords"></p>
+
+   <script>
+   function showCoords(event) {
+       document.getElementById("coords").innerText = `X: ${event.clientX}, Y: ${event.clientY}`;
+   }
+   </script>
+   ```
+
+---
+
+## 📌 **Eventos de Carga y Descarga**
+8. **`onLoad`** → Se activa cuando una página o recurso (como una imagen) ha terminado de cargarse.  
+   🔹 Ejemplo: Mostrar una alerta cuando la página se carga.  
+   ```html
+   <body onload="alert('¡Página cargada!')">
+   ```
+
+9. **`onUnload`** → Se activa cuando el usuario abandona la página (cierra la pestaña o navega a otro sitio).  
+   🔹 Ejemplo: Avisar al usuario antes de salir.  
+   ```html
+   <body onunload="alert('¡Adiós!')">
+   ```
+
+---
+
+## 📌 **Eventos de Formularios**
+10. **`onChange`** → Se activa cuando el valor de un input o select cambia y pierde el foco.  
+    🔹 Ejemplo: Mostrar el valor seleccionado en un `<select>`.  
+    ```html
+    <select onchange="alert(this.value)">
+        <option value="rojo">Rojo</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+    </select>
+    ```
+
+11. **`onFocus`** → Se activa cuando un input gana el foco.  
+12. **`onBlur`** → Se activa cuando un input pierde el foco.  
+    🔹 Ejemplo: Cambiar el color del campo de entrada cuando recibe o pierde el foco.  
+    ```html
+    <input type="text" onfocus="this.style.backgroundColor='yellow'"
+           onblur="this.style.backgroundColor=''">
+    ```
+
+13. **`onSelect`** → Se activa cuando el usuario selecciona texto dentro de un campo `<input>` o `<textarea>`.  
+    🔹 Ejemplo: Mostrar un mensaje cuando se selecciona texto.  
+    ```html
+    <input type="text" value="Selecciona esto" onselect="alert('Texto seleccionado')">
+    ```
+
+---
+
+## 📌 **Eventos del Teclado**
+14. **`onKeyDown`** → Se activa cuando el usuario presiona una tecla.  
+15. **`onKeyUp`** → Se activa cuando el usuario suelta una tecla.  
+16. **`onKeyPress`** → (Obsoleto) Similar a `onKeyDown`, pero no detecta teclas especiales como `Shift` o `Ctrl`.  
+    🔹 Ejemplo: Mostrar qué tecla se presionó en un `<input>`.  
+    ```html
+    <input type="text" onkeydown="alert('Tecla presionada: ' + event.key)">
+    ```
