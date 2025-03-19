@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <script>
+        var x = 100; // Límite de caracteres
+        function mostrarInfo() {
+            var textoArea = document.getElementById("texto");
+            var longitud = textoArea.value.length;
+    
+            // Si supera el límite, truncar el texto
+            if (longitud > x) {
+                textoArea.value = textoArea.value.substring(0, x);
+                longitud = x; // Ajustar la longitud al límite
+            }
+    
+            // Actualizar el mensaje
+            document.getElementById("infoText").innerHTML = "Puedes escribir hasta " + (x - longitud) + " caracteres";
+        }
+    </script>
+</head>
+<body>
+    
+    <p id="infoText"></p>
+    <textarea id="texto" onkeyup="mostrarInfo()"></textarea>
+
+</body>
+</html>
