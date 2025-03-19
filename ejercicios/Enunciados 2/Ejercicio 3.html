@@ -36,7 +36,8 @@
             }
 
             // Aplicar 
-            for (let i = 0; i < parrafos.length; i++){
+            for (let i = 0; i < parrafos.length; i++){3
+                
                 if (aliniacionSeleccionada == "Izquierda"){
                     parrafos[i].style.textAlign = "left"
                 }else if (aliniacionSeleccionada == "Derecha"){
@@ -46,7 +47,8 @@
                 } else if (aliniacionSeleccionada == "Justificado") {
                     parrafos[i].style.textAlign = "justify";
                 }
-
+                
+                //parrafos[i].style.textAlign = aliniacionSeleccionada; deveria funcionar solo con esto en veza de poner tantos if
             }
 
         }
