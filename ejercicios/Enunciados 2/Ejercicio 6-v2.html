@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // Ejercicio 6. Crea dos casillas input type=”text” para recuperar de ellas el número de filas
+    // y columnas que tendrá una tabla al pulsar un botón “Generar tabla”. La tabla se generará de
+    // tal forma que al entrar en una celda se activa color de fondo amarrillo. Si la celda ha sido
+    // visitada el color de fondo de esa celda cuando el ratón no está ya en ella será verde. Si se
+    // vuelve a visitar una celda en la que previamente se ha estado se activa también de amarillo y
+    // al salir también se queda como estaba, verde.
+    // onLoad y onUnLoad
+    // onMouseOver y onMouseOut
+    // onMouseDown, onMouseMove y onMouseUp
+    // onChange
+    // onFocus y onBlur
+    // onKeyDown, onKeyUp y onKeyPress
+    // onSelect
+    // onSubmit
+    // onReset
+
+    function showArr(){
+            let num1 = parseInt(document.getElementById("in1").value)
+            let num2 = parseInt(document.getElementById("in2").value)
+
+            document.write("<table border='2'>")
+            for(let i= 0; i < num1; i++){
+                document.write("<tr>")
+                for(let j = 0; j < num2; j++){
+                    document.write("<td onMouseOver=\"focusCelda(this)\" onMouseOut=\"paint(this)\"> --- </td>");
+                }
+                document.write("<tr>")
+            }
+            document.write("</table>")
+    }
+
+    function paint(elem){
+        if(elem.style.backgroundColor == "yellow" && !elem.visited){
+            elem.style.backgroundColor = "green";
+            elem.visited = true;
+        } else if(elem.visited && elem.style.backgroundColor == "green"){
+            elem.style.backgroundColor = "yellow";
+            elem.visited = false;
+        }
+    }
+
+    function focusCelda(elem){
+        elem.style.backgroundColor = "yellow";
+    }
+</script>
+<body>
+    <input type="text" name="in1" id="in1">
+    <input type="text" name="in1" id="in2">
+    <button onclick="showArr()">Generar tabla</button>
+</body>
+</html>
