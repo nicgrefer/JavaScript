@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+        function Persona(nombre, edad, sexo){
+            this.nombre = nombre;
+            this.edad = edad;
+            this.sexo = sexo;
+
+            this.mostrar = function(){
+                alert("Nombre: " + this.nombre + "\nEdad: " + this.edad + "\nSexo: " + this.sexo)
+            }
+            this.toString = function(){
+                return "Nombre: " + this.nombre + "\nEdad: " + this.edad + "\nSexo: " + this.sexo
+            }
+
+            this.incrementarEdad = function(){
+                this.edad++;
+            }
+
+            this.saludar=function(p)
+            {
+                alert("Hola " + p.nombre + " soy " + this.nombre);
+            }
+        }
+
+        pepe=new Persona("Pepe", 25, "M")
+        pepe.mostrar()
+        juan=new Persona("Juan", 30, "M")
+        juan.mostrar()
+        pepe.saludar(juan)
+        alert(pepe.toString())    
+
+
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
