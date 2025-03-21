@@ -259,3 +259,18 @@ Este formulario permite ingresar dos números en los campos de entrada y, al pre
     ```html
     <input type="text" onkeydown="alert('Tecla presionada: ' + event.key)">
     ```
+
+# Orientacion a objetos
+
+Igual que en `java` podemos cear objetos en **`JavaScript`** podemos cear una `funcion` para implementar objetos. Para ello ay que añadir el constructor 
+
+````javascript
+function Persona(nombre, edad, sexo){
+    this.nombre = nombre;
+    this.edad = edad;
+    this.sexo = sexo;
+}
+````
+Tambien podemos crear distintas funciones como... `incrementarEdad`... que se pondran dentro de la funcion a la que la pertenece
+
+[Ejemplo de JS orientado a objetos](/ejemplos/ejem05_OrientacionObjetos.html)
