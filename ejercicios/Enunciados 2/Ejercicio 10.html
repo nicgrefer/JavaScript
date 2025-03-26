@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Coordenadas</title>
+    <script>
+        function moverCoordenadas() {
+            // Obtener los valores de las coordenadas y la distancia
+            let x = parseFloat(document.getElementById("x").value);
+            let y = parseFloat(document.getElementById("y").value);
+            let distancia = parseFloat(document.getElementById("distancia").value);
+
+            // Comprobar si los valores son números
+            if (isNaN(x) || isNaN(y) || isNaN(distancia)) {
+                alert("Por favor, ingrese valores numéricos válidos.");
+                return;
+            }
+
+            // Sumar la distancia a las coordenadas
+            let nuevaX = x + distancia;
+            let nuevaY = y + distancia;
+
+            // Mostrar las nuevas coordenadas
+            document.getElementById("resultado").innerHTML = `Nueva Coordenada X: ${nuevaX}, Nueva Coordenada Y: ${nuevaY}`;
+        }
+    </script>
+</head>
+<body>
+    <h2>Formulario para mover coordenadas</h2>
+    <form>
+        <label for="x">Coordenada X:</label>
+        <input type="text" id="x" required><br><br>
+
+        <label for="y">Coordenada Y:</label>
+        <input type="text" id="y" required><br><br>
+
+        <label for="distancia">Distancia a mover:</label>
+        <input type="text" id="distancia" required><br><br>
+
+        <button type="button" onclick="moverCoordenadas()">Mover</button>
+    </form>
+
+    <h3 id="resultado"></h3>
+</body>
+</html>
