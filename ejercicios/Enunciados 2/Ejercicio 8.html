@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input-blokeo {
+            background-color: red;
+        }
+    </style>
+    <script>
+        function notificación() {
+            let nombre = document.getElementsByName("nombre")[0].value;
+            let apellido = document.getElementsByName("apellido")[0].value;
+            let correo = document.getElementsByName("correo")[0]; // Obtén el elemento
+
+            // Mostrar alerta con los datos
+            alert(`Formulario enviado con los siguientes datos: Nombre ${nombre}, Apellido ${apellido}, Correo ${correo.value}`);
+
+            // Cambiar el fondo del campo de correo a rojo
+            correo.classList.add("input-blokeo");
+        }
+    </script>
+</head>
+<body>
+    
+<h4>Si quieres contactar con nosotros rellena este formulario</h4>
+
+<form>
+    <fieldset>
+        <p> Nombre <input type="text" name="nombre"> </p>
+        <p> Apellidos <input type="text" name="apellido"> </p>
+        <p> Correo electrónico <input type="email" name="correo"> </p>
+
+        <button type="button" onclick="notificación()">Enviar consulta</button>
+    </fieldset>
+</form>
+
+</body>
+</html>

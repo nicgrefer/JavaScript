@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <style>
+        p{
+            text-align: center;
+        }
+
+        p:hover{
+            background-color: aqua;
+        }
+
+        button{
+            position: relative;
+            left: calc(50% - 50px);
+            background-color: rgb(92, 185, 92);
+            border-radius: 4px;
+        }
+        button:hover{
+            opacity: 80%;
+        }
+
+    </style>
+    <script type="text/javascript">
+        function autoNumerar(){
+            let p = document.getElementsByTagName("p");
+            for (let i = 0; i < p.length; i++) {
+                p[i].innerHTML = "Parrafo " + (i+1);
+            }
+        }
+    </script>
+
+</head>
+<body>
+    
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, illo.</p>
+    <p>Enim possimus velit quasi fuga esse est molestiae, error corrupti.</p>
+    <p>Praesentium sit harum perferendis doloremque blanditiis consequatur, soluta officia. Doloribus?</p>
+    <p>Natus ab velit exercitationem? Excepturi totam proearum delectus?</p>
+    <p>Magnam soluta eum omnis laboriosam sit possimus, sequi ipsum quae?</p>
+    <p>Amet iure doloremque minima voluptas nihil vel magnam? Sed, distinctio!</p>
+    <p>Saepe voluptate neque omnis, qui itaque facere placeat voluptatem non.</p>
+    <p>Eveniet velit ratione facilis distinctio deleniti rerum nihil expedita molestiae.</p>
+    <p>Iure odit magnam alias sapiente corporis dolores vero facere quos?</p>
+    <p>Omnis explicabo quia nostrum ipsum voluptatum, optio cuvoluptates.</p>
+
+
+    <button onclick="autoNumerar()" > Auto numerar </button>
+
+
+</body>
+</html>
