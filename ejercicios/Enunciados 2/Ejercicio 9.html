@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+
+        window.onload = function () {
+            let inputs = document.getElementsByTagName("input");
+
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].onfocus = function () {
+                    fondo(this, "red"); // Cambia el fondo a rojo cuando se enfoca
+                }
+                inputs[i].onblur = function () {
+                    fondo(this, "white"); // Restaura el fondo cuando se desenfoca
+                }
+            }
+        }
+
         function mostrar() {
             let input = document.getElementsByTagName("input");
             let output = document.getElementById("output");
@@ -27,23 +41,23 @@
     
 
 <!-- Cada input tiene sus propios eventos onfocus y onblur -->
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-<input type="text" name="" id="" onfocus="fondo(this, 'yellow')" onblur="fondo(this, 'white')">
-.
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+
 <br><br>
 
 <button onclick="mostrar()">Ejecutar</button>
