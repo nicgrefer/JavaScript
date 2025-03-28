@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function Persona(nombre, apellidos, correo)
+        {
+            this.nombre=nombre;
+            this.apellidos=apellidos;
+            this.correo=correo;
+            this.mostrar = function mostrarDatos()
+            {
+               return "Mensaje enviado correctamente con los siguientes datos: "+ this.nombre + " " + this.apellidos + " " + this.correo;
+            }
+            
+        }
+
+        function enviar(){
+            var nombre=document.getElementById("nombre").value;
+            var apellido=document.getElementById("apellidos").value;
+            var correo=document.getElementById("correo").value;
+            usuario=new Persona(nombre,apellido,correo);
+            document.getElementById("texto").innerHTML=usuario.mostrar();
+        }
+
+        function cambiarColor(componente,color){
+            componente.style.backgroundColor=color;
+        }
+    </script>
+</head>
+<body>
+    <!-- <p>Nombre: <input type="text" id="nombre" onfocus="entrada(this)" onfocusout="salida(this)"></p>-->
+    <p>Nombre: <input type="text" id="nombre" onfocus="cambiarColor(this,'red')" onblur="cambiarColor(this,'white')"></p>
+
+
+    <p>Apellidos: <input type="text" id="apellidos" onfocus="cambiarColor(this,'red')" onfocusout="cambiarColor(this,'white')"></p>
+    <p>Correo electronico: <input type="text" id="correo" onfocus="cambiarColor(this,'red')" onfocusout="cambiarColor(this,'white')"></p>
+    <p><input type="button" value="Enviar" onclick="enviar()"></p> 
+    <p id="texto">
+
+    </p>
+</body>
+</html>
