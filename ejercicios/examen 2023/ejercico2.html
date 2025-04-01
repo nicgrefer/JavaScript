@@ -8,17 +8,40 @@
 
         function ejecutar(){
 
-            var x = 0;
-            var y = 0;
-            var z = 0;
+            let arrayValores = [];
 
-            array=[]
+            arrayValores[0] = document.getElementById("valor1").value;
+            arrayValores[1] = document.getElementById("valor2").value;
+            arrayValores[2] = document.getElementById("valor3").value;
+            arrayValores[3] = document.getElementById("valor4").value;
             
-            array [0]= document.getElementById
-            
+            generarTexto(arrayValores);
+        }
+
+        function generarTexto(arrayValores){
+
+            let x = 0;
+            let y = 0;
+            let z = 0;
 
 
-            document.getElementById("output").innerHTML = "x: " + x + ", y: " + y + ", z: " + z + ", w: " + w;
+            for (let i = 0; i<arrayValores.length;i++){
+                let valor = parseInt(arrayValores[i]);
+
+                if (!isNaN(valor)){ //Si no es nula
+                    x= x+valor; // Suma de todos los datos
+
+                    //Si es mayor de 36 --> suma
+                    if (valor>36){
+                        y = y+valor;
+                    }
+                    // si es mayor de 50 --> cuantos hay
+                    if (valor>50){
+                        z++;
+                    }
+                }
+            }
+            document.getElementById("output").innerHTML= "Valor X: " + x + "<br>Valor Y: " + y + "<br>Valor Z: " + z;
         }
 
         
@@ -26,10 +49,11 @@
 </head>
 <body>
     
-    <p>Dame un numero <input type="number" id="1"> </p>
-    <p>Dame otro numero <input type="number" id="2"> </p>
-    <p>Dame el tercer numero <input type="number" id="3"> </p>
-    <p>Dame el cuarto numero <input type="number" id="4"> </p>
+    <input type="text" id="valor1" placeholder="Datos del primer valor"><br><br>
+    <input type="text" id="valor2" placeholder="Datos del segundo valor"><br><br>
+    <input type="text" id="valor3" placeholder="Datos del tercer valor"><br><br>
+    <input type="text" id="valor4" placeholder="Datos del cuarto valor"><br><br>
+
 
     <button onclick="ejecutar()">Ejecutar</button>
 
