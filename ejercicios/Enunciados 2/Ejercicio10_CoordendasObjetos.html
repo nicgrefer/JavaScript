@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 10 Este esta con Orientacion Objetos</title>
+    <script>
+        function coordenada(coordX, coordY) {
+            this.posicX = coordX;
+            this.posicY = coordY;
+
+            this.desplazar = function desplaz(distX, distY) {
+                this.posicX = this.posicX + distX;
+                this.posicY = this.posicY + distY;
+            }
+            this.mostrar = function mostrarDatos()
+            {
+                return "Posición del punto: (" + this.posicX + "," + this.posicY + ")";
+            }
+            
+        }
+
+        window.onload = function() {
+            var coordX = prompt("Coordenada X", "Inserte una coordenada X.");
+            var coordY = prompt("Coordenada Y", "Inserte una coordenada Y.");
+            coord = new coordenada(parseInt(coordX), parseInt(coordY));
+            //coord.desplazar(coordX,coordY);
+            document.getElementById("texto").innerHTML = coord.mostrar();
+        }
+
+        function actualizar() {
+            var distanciaX = document.getElementById("moverX").value;
+            var distanciaY = document.getElementById("moverY").value;
+            coord.desplazar(parseInt(distanciaX), parseInt(distanciaY));
+            document.getElementById("texto").innerHTML = coord.mostrar();
+        }
+
+    </script>
+</head>
+
+<body>
+    <h3 id="texto">Posición del punto: (0,0)</h3>
+
+    Desplazar X: <input type="number" id="moverX"><br><br>
+    Desplazar Y: <input type="number" id="moverY"><br><br>
+    <input type="button" value="Actualizar" onclick="actualizar()">
+</body>
+
+</html>

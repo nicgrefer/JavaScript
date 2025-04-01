@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function estudiante (nombre, edad, notaMedia){
+
+            this.nombre = nombre;
+            this.edad = edad;
+            this.notaMedia = notaMedia;
+
+            this.mostrar = function mostrarDatos(){
+                return "nombre: "+ this.nombre + "\nedad: "+ this.edad+ "\nnota media: "+this.notaMedia
+            }
+
+
+        }
+        function almacenarDatos(){
+            nombre = document.getElementById("nombre").value;
+            edad = document.getElementById("edad").value;
+            notaMedia = document.getElementById("notaMedia").value;
+
+            var estudiante1 = new estudiante(nombre, edad, notaMedia);
+            alert(estudiante1.mostrar());
+        }
+
+        function colorear(elemento, modo) {
+            if (modo == 1) {
+                elemento.style.backgroundColor = 'red';
+                elemento.style.color = 'white';
+            } else if (modo == 0) {
+                elemento.style.backgroundColor = 'white';
+                elemento.style.color = 'black';
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form action="">
+        <h3> -REGISTRO - <br></h3>
+        Nombre:<br>
+        <input type="text" id="nombre" onfocus="colorear(this, 1)" onfocusout="colorear(this, 0)"><br><br>
+        Edad:<br>
+        <input type="text" id="edad" onfocus="colorear(this, 1)" onfocusout="colorear(this, 0)"><br><br>
+        Nota media:<br>
+        <input type="text" id="notaMedia" onfocus="colorear(this, 1)" onfocusout="colorear(this, 0)"><br><br>
+        <button onclick="almacenarDatos()">Almacenar datos</button>
+    </form>
+    
+
+</body>
+</html>
